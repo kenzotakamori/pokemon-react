@@ -8,13 +8,8 @@ function PokemonList(props) {
     />
   )
 
-  const style = {
-    'display': 'grid',
-    'grid-template-columns': 'repeat(6,1fr)'
-  }
-
   return (
-    <div className="pokemonList" style={style}>
+    <div className="PokemonList">
       {pokemonsComponent}
     </div>
   );

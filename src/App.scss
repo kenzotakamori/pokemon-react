@@ -1,0 +1,17 @@
+.App {
+    .PokemonList {
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        .Pokemon {
+            display: inline-grid;
+            margin: auto;
+            img {
+                margin: auto;
+            }
+            span {
+                text-align: center;
+                text-transform: uppercase;
+            }
+        }
+    }
+}

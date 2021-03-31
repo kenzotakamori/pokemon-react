@@ -1,4 +1,4 @@
-import './App.css';
+import './App.scss';
 import pokemonsData from './pokemonsData'
 import PokemonList from './components/PokemonList'
 
