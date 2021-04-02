@@ -4,7 +4,7 @@ class Pokemon extends React.Component {
   render() {
     const info = this.props.info;
     const styles = {
-      'display': info.display ? 'block' : 'none'
+      'display': info.display ? 'inline-grid' : 'none'
     }
 
     return (

@@ -3,6 +3,8 @@ import './App.scss';
 import pokemonsData from './pokemonsData'
 import PokemonList from './components/PokemonList'
 import SearchTool from './components/SearchTool'
+import PokemonHeader from './components/PokemonHeader'
+import PokemonFooter from './components/PokemonFooter'
 
 class App extends React.Component {
   constructor() {
@@ -30,19 +32,20 @@ class App extends React.Component {
   };
 
   translateToRegex(text) {
-    // return `/*${text.split('').join('*')}*/`;
     return new RegExp(text);
   };
 
   render() {
     return (
       <div className="App">
+        <PokemonHeader />
         <SearchTool
           handleInputChange={this.handleInputChange}
         />
         <PokemonList
           data={this.state.data}
         />
+        <PokemonFooter />
       </div>
     );
   };
