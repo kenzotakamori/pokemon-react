@@ -1,4 +1,16 @@
 .App {
+    width: 100%;
+    .SearchTool {
+        
+    }
+    input {
+        margin: 30px auto 30px auto;
+        display: block;
+        width: 300px;
+        height: 60px;
+        font-size: 30px;
+        text-align: center;
+    }
     .PokemonList {
         display: grid;
         grid-template-columns: repeat(6, 1fr);
