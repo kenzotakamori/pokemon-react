@@ -1,6 +1,9 @@
 .App {
   width: 100%;
+  height: 100vh;
+  overflow-y: hidden;
   .SearchTool {
+    padding-top: 15vh;
     input {
       margin: 30px auto 30px auto;
       display: block;
@@ -13,6 +16,8 @@
   .PokemonList {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
+    height: 55vh;
+    overflow: scroll;
     .Pokemon {
       margin: auto;
       img {
@@ -23,5 +28,55 @@
         text-transform: uppercase;
       }
     }
+  }
+
+  header {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    .red-section {
+      background-color: red;
+      transition: all 1s;
+    }
+    .black-section {
+      height: 8px;
+      background-color: black;
+      .black-circle {
+        position: absolute;
+        left: 0;
+        right: 0;
+        width: 30px;
+        height: 30px;
+        margin: auto;
+        margin-top: -10px;
+        border-radius: 15px;
+        z-index: 3;
+        background-color: black;
+        .white-poke-button {
+          cursor: pointer;
+          position: relative;
+          width: 24px;
+          height: 24px;
+          border-radius: 12px;
+          z-index: 4;
+          background-color: white;
+          margin: 3px;
+          &:hover {
+            background-color: #f7766d;
+          }
+        }
+      }
+    }
+  }
+
+  footer {
+    transition: all 1s;
+    position: absolute;
+    bottom: 0;
+    height: 48.5vh;
+    width: 100%;
+    z-index: 1;
+    background-color: white;
+    border-top: 2px solid black;
   }
 }

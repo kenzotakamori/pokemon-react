@@ -13,9 +13,18 @@ class App extends React.Component {
       data: pokemonsData.map((p) => {
         p.display = true;
         return p;
-      })
+      }),
+      isOpen: false
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.togglePokeball = this.togglePokeball.bind(this);
+  };
+
+  togglePokeball() {
+    this.setState((prevState) => ({
+      isOpen: !prevState.isOpen
+    }));
+    console.log('isOpen: ', this.state.isOpen);
   };
 
   handleInputChange(event) {
@@ -38,14 +47,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <PokemonHeader />
+        <PokemonHeader 
+          isOpen={this.state.isOpen}
+          togglePokeball={this.togglePokeball}
+        />
         <SearchTool
           handleInputChange={this.handleInputChange}
         />
         <PokemonList
           data={this.state.data}
         />
-        <PokemonFooter />
+        <PokemonFooter isOpen={this.state.isOpen}/>
       </div>
     );
   };

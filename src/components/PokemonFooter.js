@@ -2,8 +2,13 @@ import React from 'react';
 
 class PokemonFooter extends React.Component {
   render() {
+    const height = this.props.isOpen ? '10vh' : '49vh'
+    const styles = {
+      'height': height
+    }
+
     return (
-        <footer>Here goes the footer</footer>
+        <footer style={styles}></footer>
     );
   };
 };
