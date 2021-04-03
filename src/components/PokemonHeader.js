@@ -16,7 +16,9 @@ class PokemonHeader extends React.Component {
         </div>
         <div className="black-section">
           <div className="black-circle">
-            <div className="white-poke-button" onClick={this.props.togglePokeball}></div>
+            <div className="white-circle">
+              <div className="white-poke-button" onClick={this.props.togglePokeball}></div>
+            </div>
           </div>
         </div>
       </header>
