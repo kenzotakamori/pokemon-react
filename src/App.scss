@@ -5,9 +5,11 @@
   .pokemon-body {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
   }
   .SearchTool {
-    padding-top: 15vh;
+    height: 15vh;
     input {
       margin: 30px auto 30px auto;
       display: block;
@@ -20,11 +22,10 @@
   .PokemonList {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    height: 57vh;
+    height: 65vh;
     overflow-y: scroll;
     .Pokemon {
       display: inline-grid;
-      margin: auto;
       img {
         margin: auto;
       }
