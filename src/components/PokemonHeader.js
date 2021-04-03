@@ -10,9 +10,9 @@ class PokemonHeader extends React.Component {
     return (
       <header>
         <div className="red-section" style={styles}>
-          {/* {
-            this.props.isOpen && <img alt="logo" src='../src/images/pokemon-logo.png'/>
-          } */}
+          {
+            this.props.isOpen && <img alt="logo" src='/images/pokemon-logo.png'/>
+          }
         </div>
         <div className="black-section">
           <div className="black-circle">

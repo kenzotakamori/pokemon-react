@@ -24,7 +24,6 @@ class App extends React.Component {
     this.setState((prevState) => ({
       isOpen: !prevState.isOpen
     }));
-    console.log('isOpen: ', this.state.isOpen);
   };
 
   handleInputChange(event) {
@@ -51,12 +50,19 @@ class App extends React.Component {
           isOpen={this.state.isOpen}
           togglePokeball={this.togglePokeball}
         />
-        <SearchTool
-          handleInputChange={this.handleInputChange}
-        />
-        <PokemonList
-          data={this.state.data}
-        />
+        <div className="pokemon-body">
+          <div>
+            <SearchTool
+              handleInputChange={this.handleInputChange}
+            />
+            <PokemonList
+              data={this.state.data}
+            />`
+          </div>
+          <div>
+            Informações sobre o pokemão aqui
+          </div>
+        </div>
         <PokemonFooter isOpen={this.state.isOpen}/>
       </div>
     );
