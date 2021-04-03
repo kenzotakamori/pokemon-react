@@ -3,12 +3,9 @@ import React from 'react'
 class Pokemon extends React.Component {
   render() {
     const info = this.props.info;
-    const styles = {
-      'display': info.display ? 'inline-grid' : 'none'
-    }
 
     return (
-      <div className="Pokemon" style={styles}>
+      <div className={info.display ? 'Pokemon' : 'Pokemon hide'}>
         <img 
           src={info.imgUrl}
           alt={info.name}/>

@@ -2,17 +2,9 @@ import React from 'react';
 
 class PokemonFooter extends React.Component {
   render() {
-    const height = this.props.isOpen ? '10vh' : '49vh'; 
-    const styles = {
-      'height': height
-    };
-    const rowStyles = {
-      'lineHeight': height
-    }
-
     return (
-      <footer style={styles}>
-        <div className="row-icons" style={rowStyles}>
+      <footer className={this.props.isOpen ? 'footer-open' : ''}>
+        <div className="row-icons">
           <a 
             href="https://www.linkedin.com/in/marcelo-kenzo-takamori/"
             target="_blank"

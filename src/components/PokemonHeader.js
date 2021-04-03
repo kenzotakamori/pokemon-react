@@ -2,14 +2,9 @@ import React from 'react';
 
 class PokemonHeader extends React.Component {
   render() {
-    const height = this.props.isOpen ? '10vh' : '50vh'
-    const styles = {
-      'height': height
-    }
-
     return (
       <header>
-        <div className="red-section" style={styles}>
+        <div className={this.props.isOpen ? 'red-section header-open' : 'red-section'}>
           {
             this.props.isOpen && <img alt="logo" src='/images/pokemon-logo.png'/>
           }

@@ -23,6 +23,7 @@
     height: 57vh;
     overflow-y: scroll;
     .Pokemon {
+      display: inline-grid;
       margin: auto;
       img {
         margin: auto;
@@ -30,6 +31,9 @@
       span {
         text-align: center;
         text-transform: uppercase;
+      }
+      &.hide {
+        display: none;
       }
     }
   }
@@ -39,8 +43,12 @@
     z-index: 2;
     position: absolute;
     .red-section {
+      height: 50vh;
       background-color: red;
       transition: all 1s;
+      &.header-open {
+        height: 10vh;
+      }
     }
     .black-section {
       height: 8px;
@@ -53,14 +61,14 @@
         height: 36px;
         margin: auto;
         margin-top: -13px;
-        border-radius: 18px;
+        border-radius: 50%;
         z-index: 3;
         background-color: black;
         .white-circle {
           position: relative;
           width: 24px;
           height: 24px;
-          border-radius: 12px;
+          border-radius: 50%;
           z-index: 4;
           background-color: white;
           margin: 6px;
@@ -71,7 +79,7 @@
             left: 2px;
             width: 18px;
             height: 18px;
-            border-radius: 9px;
+            border-radius: 50%;
             z-index: 4;
             background-color: white;
             border: 1px solid grey;
@@ -85,6 +93,7 @@
   }
 
   footer {
+    height: 49vh;
     transition: all 1s;
     position: absolute;
     bottom: 0;
@@ -93,6 +102,7 @@
     background-color: white;
     border-top: 2px solid black;
     .row-icons {
+      line-height: 49vh;
       text-align: center;
       transition: all 1s;
       a {
@@ -102,6 +112,12 @@
         &:hover {
           color: #f7766d;
         }
+      }
+    }
+    &.footer-open {
+      height: 10vh;
+      .row-icons {
+        line-height: 10vh;
       }
     }
   }
