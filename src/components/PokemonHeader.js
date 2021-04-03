@@ -5,9 +5,9 @@ class PokemonHeader extends React.Component {
     return (
       <header>
         <div className={this.props.isOpen ? 'red-section header-open' : 'red-section'}>
-          {
+          {/* {
             this.props.isOpen && <img alt="logo" src='/images/pokemon-logo.png'/>
-          }
+          } */}
         </div>
         <div className="black-section">
           <div className="black-circle">
