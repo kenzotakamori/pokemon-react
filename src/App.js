@@ -18,18 +18,15 @@ class App extends React.Component {
       isOpen: false,
       selectedPokemon: {}
     };
-    this.handleInputChange = this.handleInputChange.bind(this);
-    this.handlePokemonClick = this.handlePokemonClick.bind(this);
-    this.togglePokeball = this.togglePokeball.bind(this);
   };
 
-  togglePokeball() {
+  togglePokeball = () => {
     this.setState((prevState) => ({
       isOpen: !prevState.isOpen
     }));
   };
 
-  handleInputChange(event) {
+  handleInputChange = (event) => {
     const value = event.target.value;
     const regex = this.translateToRegex(value);
     this.setState((prevState) => {
@@ -42,7 +39,7 @@ class App extends React.Component {
     });
   };
 
-  handlePokemonClick(name) {
+  handlePokemonClick = (name) => {
     fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
       .then(res => res.json())
       .then((result) => {
@@ -52,7 +49,7 @@ class App extends React.Component {
       });
   };
 
-  translateToRegex(text) {
+  translateToRegex = (text) => {
     return new RegExp(text);
   };
 
