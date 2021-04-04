@@ -10,6 +10,7 @@ class Pokemon extends React.Component {
           <img 
             src={info.imgUrl}
             alt={info.name}
+            onClick={() => this.props.handlePokemonClick(info.name)}
           />
         </div>
         <span><code>{info.name}</code></span>

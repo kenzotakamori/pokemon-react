@@ -15,9 +15,11 @@ class App extends React.Component {
         p.display = true;
         return p;
       }),
-      isOpen: false
+      isOpen: false,
+      selectedPokemon: ''
     };
     this.handleInputChange = this.handleInputChange.bind(this);
+    this.handlePokemonClick = this.handlePokemonClick.bind(this);
     this.togglePokeball = this.togglePokeball.bind(this);
   };
 
@@ -40,6 +42,13 @@ class App extends React.Component {
     });
   };
 
+  handlePokemonClick(name) {
+    console.log(name);
+    this.setState({
+      selectedPokemon: name
+    });
+  };
+
   translateToRegex(text) {
     return new RegExp(text);
   };
@@ -58,9 +67,12 @@ class App extends React.Component {
             />
             <PokemonList
               data={this.state.data}
-            />`
+              handlePokemonClick={this.handlePokemonClick}
+            />
           </div>
-          <PokemonDetail />
+          <PokemonDetail
+            selectedPokemon={this.state.selectedPokemon}
+          />
         </div>
         <PokemonFooter isOpen={this.state.isOpen}/>
       </div>

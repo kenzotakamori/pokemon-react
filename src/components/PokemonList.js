@@ -7,6 +7,7 @@ class PokemonList extends React.Component {
       <Pokemon
         key={pokemon.name}
         info={pokemon}
+        handlePokemonClick={this.props.handlePokemonClick}
       />
     )
 
