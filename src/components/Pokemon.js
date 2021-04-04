@@ -6,10 +6,13 @@ class Pokemon extends React.Component {
 
     return (
       <div className={info.display ? 'Pokemon' : 'Pokemon hide'}>
-        <img 
-          src={info.imgUrl}
-          alt={info.name}/>
-        <span>{info.name}</span>
+        <div className="image-container">
+          <img 
+            src={info.imgUrl}
+            alt={info.name}
+          />
+        </div>
+        <span><code>{info.name}</code></span>
       </div>
     );
   }
