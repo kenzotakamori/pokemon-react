@@ -16,7 +16,7 @@ class App extends React.Component {
         return p;
       }),
       isOpen: false,
-      selectedPokemon: ''
+      selectedPokemon: {}
     };
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handlePokemonClick = this.handlePokemonClick.bind(this);
@@ -43,10 +43,13 @@ class App extends React.Component {
   };
 
   handlePokemonClick(name) {
-    console.log(name);
-    this.setState({
-      selectedPokemon: name
-    });
+    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
+      .then(res => res.json())
+      .then((result) => {
+        this.setState({
+          selectedPokemon: result
+        });
+      });
   };
 
   translateToRegex(text) {

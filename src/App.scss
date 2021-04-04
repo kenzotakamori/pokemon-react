@@ -67,6 +67,19 @@
     }
   }
 
+  .PokemonDetail {
+    display: grid;
+    height: 60vh;
+    width: 80%;
+    padding: 10px;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    .pokemon-detail-list {
+      display: grid;
+    }
+  }
+
   header {
     width: 100%;
     z-index: 2;
