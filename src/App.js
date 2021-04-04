@@ -16,6 +16,7 @@ class App extends React.Component {
         return p;
       }),
       isOpen: false,
+      isPokemonClicked: false,
       selectedPokemon: {}
     };
   };
@@ -44,6 +45,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then((result) => {
         this.setState({
+          isPokemonClicked: true,
           selectedPokemon: result
         });
       });
@@ -54,6 +56,7 @@ class App extends React.Component {
   };
 
   render() {
+    const dataLength = this.state.data.filter((p) => p.display).length;
     return (
       <div className="App">
         <PokemonHeader 
@@ -65,14 +68,26 @@ class App extends React.Component {
             <SearchTool
               handleInputChange={this.handleInputChange}
             />
-            <PokemonList
-              data={this.state.data}
-              handlePokemonClick={this.handlePokemonClick}
-            />
+            {
+              dataLength ?
+              <PokemonList
+                data={this.state.data}
+                handlePokemonClick={this.handlePokemonClick}
+              /> :
+              <div className="no-pokemon-found">
+                <code>Não achamos nada, meu chapa</code>
+              </div>
+            }
           </div>
-          <PokemonDetail
-            selectedPokemon={this.state.selectedPokemon}
-          />
+          {
+            this.state.isPokemonClicked ?
+            <PokemonDetail
+              selectedPokemon={this.state.selectedPokemon}
+            /> :
+            <div className="no-pokemon-selected">
+              Clica em um pokemon, meu chapa
+            </div>
+          }
         </div>
         <PokemonFooter isOpen={this.state.isOpen}/>
       </div>

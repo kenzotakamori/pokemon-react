@@ -9,4 +9,37 @@
   .pokemon-detail-list {
     display: grid;
   }
+  .pokemon-name {
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 1.8em;
+    font-weight: bold;
+    line-height: 2em;
+    border-radius: 5px;
+    border: 2px solid black;
+    background-color: black;
+    color: #88ff33;
+  }
+  .pokemon-image-container {
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: -1px;
+    img {
+      width: 150px;
+      height: auto;
+      margin: auto;
+      display: block;
+    }
+  }
+}
+
+.no-pokemon-selected {
+  height: 60vh;
+  width: 80%;
+  padding: 10px;
+  margin: auto;
+  border: 2px solid black;
+  border-radius: 10px;
 }

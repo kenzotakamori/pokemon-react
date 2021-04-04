@@ -2,7 +2,6 @@ import React from 'react';
 
 class PokemonDetail extends React.Component { 
   getTypes(types) {
-    console.log('types; ', types)
     return types?.map((t) => t.type.name).join(', ');
   }
   render() {
@@ -11,8 +10,12 @@ class PokemonDetail extends React.Component {
 
     return (
       <div className="PokemonDetail">
-        <span className="pokemon-name">{info.name}</span>
-        <img alt={info.name} src={info?.sprites?.front_default}/>
+        <span className="pokemon-name">
+          <code>{info.name}</code>
+        </span>
+        <div className="pokemon-image-container">
+          <img alt={info.name} src={info?.sprites?.front_default}/>
+        </div>
         <div className="pokemon-detail-list">
           <span>
             <code>
