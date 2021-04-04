@@ -1,0 +1,29 @@
+footer {
+  height: 49vh;
+  transition: all 1s;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: white;
+  border-top: 2px solid black;
+  .row-icons {
+    line-height: 49vh;
+    text-align: center;
+    transition: all 1s;
+    a {
+      padding: 0 10px 0 10px;
+      font-size: 1.7em;
+      color: grey;
+      &:hover {
+        color: #f7766d;
+      }
+    }
+  }
+  &.footer-open {
+    height: 10vh;
+    .row-icons {
+      line-height: 10vh;
+    }
+  }
+}
