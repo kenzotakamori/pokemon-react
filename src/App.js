@@ -5,6 +5,7 @@ import PokemonList from './components/PokemonList'
 import SearchTool from './components/SearchTool'
 import PokemonHeader from './components/PokemonHeader'
 import PokemonFooter from './components/PokemonFooter'
+import PokemonDetail from './components/PokemonDetail'
 
 class App extends React.Component {
   constructor() {
@@ -59,9 +60,7 @@ class App extends React.Component {
               data={this.state.data}
             />`
           </div>
-          <div>
-            Informações sobre o pokemão aqui
-          </div>
+          <PokemonDetail />
         </div>
         <PokemonFooter isOpen={this.state.isOpen}/>
       </div>
