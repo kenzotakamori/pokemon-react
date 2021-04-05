@@ -64,28 +64,30 @@ class App extends React.Component {
           togglePokeball={this.togglePokeball}
         />
         <div className="pokemon-body">
-          <div>
-            <SearchTool
-              handleInputChange={this.handleInputChange}
-            />
-            {
-              dataLength ?
-              <PokemonList
-                data={this.state.data}
-                handlePokemonClick={this.handlePokemonClick}
-              /> :
-              <div className="no-pokemon-found">
-                <code>Não achamos nada, meu chapa</code>
+          <SearchTool
+            handleInputChange={this.handleInputChange}
+          />
+          {
+            dataLength ?
+            <PokemonList
+              data={this.state.data}
+              handlePokemonClick={this.handlePokemonClick}
+            /> :
+            <div className="no-pokemon-found">
+              <div className="no-pokemon-found__text">
+                <code>Ops, nenhum Pokémon encontrado!</code>
               </div>
-            }
-          </div>
+            </div>
+          }
           {
             this.state.isPokemonClicked ?
             <PokemonDetail
               selectedPokemon={this.state.selectedPokemon}
             /> :
             <div className="no-pokemon-selected">
-              Clica em um pokemon, meu chapa
+              <div className="no-pokemon-selected__text">
+                <code>Clique em algum Pokémon!</code>
+              </div>
             </div>
           }
         </div>

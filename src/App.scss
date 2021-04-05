@@ -11,10 +11,11 @@
   overflow-y: hidden;
   .pokemon-body {
     display: grid;
-    grid-template-columns: 2fr 1fr;
-    padding-top: calc(10vh + 8px);
-    padding-bottom: 10vh;
-    height: calc(80vh - 9px);
+    grid-template-columns: 2fr 3fr 2fr;
+    grid-column-gap: 25px;
+    padding-top: calc(12vh + 8px);
+    padding-bottom: 12vh;
+    height: calc(76vh - 9px);
     max-width: 1200px;
     margin: auto;
   }

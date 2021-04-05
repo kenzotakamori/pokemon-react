@@ -24,12 +24,12 @@ class PokemonDetail extends React.Component {
           </span>
           <span>
             <code>
-              <b>Weight: </b>#{info.weight}
+              <b>Weight: </b>{info.weight}
             </code>
           </span>
           <span>
             <code>
-              <b>Height: </b>#{info.height}
+              <b>Height: </b>{info.height}
             </code>
           </span>
           <span>
