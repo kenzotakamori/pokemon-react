@@ -74,6 +74,7 @@ class App extends React.Component {
               handlePokemonClick={this.handlePokemonClick}
             /> :
             <div className="no-pokemon-found">
+              <i class="fal fa-telescope fa-5x"></i>
               <div className="no-pokemon-found__text">
                 <code>Ops, nenhum Pokémon encontrado!</code>
               </div>
@@ -85,6 +86,7 @@ class App extends React.Component {
               selectedPokemon={this.state.selectedPokemon}
             /> :
             <div className="no-pokemon-selected">
+              <i class="far fa-hand-pointer fa-5x"></i>
               <div className="no-pokemon-selected__text">
                 <code>Clique em algum Pokémon!</code>
               </div>

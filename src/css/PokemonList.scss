@@ -12,11 +12,18 @@
 
 .no-pokemon-found {
     background: beige;
+    padding: 10px;
     border: 2px double black;
     border-radius: 10px;
     text-align: center;
+    i {
+        color: grey;
+        font-size: 5em;
+        position: relative;
+        top: 40%;
+    }
     &__text {
         position: relative;
-        top: 50%;
+        top: 45%;
     }
 }

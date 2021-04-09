@@ -1,10 +1,9 @@
 .SearchTool {
-  height: 15vh;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 10px;
   input {
     display: block;
-    width: 300px;
-    height: 60px;
-    font-size: 30px;
     text-align: center;
   }
 }

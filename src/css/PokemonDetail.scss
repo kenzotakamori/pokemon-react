@@ -41,8 +41,14 @@
   border: 2px solid black;
   border-radius: 10px;
   text-align: center;
-    &__text {
-      position: relative;
-      top: 50%;
-    }
+  i {
+    color: grey;
+    font-size: 5em;
+    position: relative;
+    top: 40%;
+  }
+  &__text {
+    position: relative;
+    top: 45%;
+  }
 }
