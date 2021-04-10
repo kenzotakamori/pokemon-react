@@ -4,7 +4,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Sources
 
-We are using icons from [FontAwesome](https://fontawesome.com/).
+We are using icons from [FontAwesome](https://fontawesome.com/).\
 Also, we are using APIs from [PokéAPI](https://pokeapi.co/).
 
 ## Available Scripts
