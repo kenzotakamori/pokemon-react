@@ -1,6 +1,5 @@
 @import './css/Header.scss';
 @import './css/Footer.scss';
-@import './css/SearchTool.scss';
 @import './css/PokemonList.scss';
 @import './css/Pokemon.scss';
 @import './css/PokemonDetail.scss';
@@ -11,8 +10,6 @@
   overflow-y: hidden;
   .pokemon-body {
     display: grid;
-    grid-template-columns: 2fr 3fr 2fr;
-    grid-column-gap: 25px;
     padding-top: calc(12vh + 8px);
     padding-bottom: 12vh;
     height: calc(76vh - 9px);
