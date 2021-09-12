@@ -1,4 +1,4 @@
-const PokemonFooter = (props: any) => {
+const PokedexFooter = (props: any) => {
   return (
     <footer className={props.isOpen ? 'footer-open' : ''}>
       <div className="row-icons">
@@ -35,4 +35,4 @@ const PokemonFooter = (props: any) => {
   );
 };
 
-export default PokemonFooter;
+export default PokedexFooter;

@@ -1,4 +1,4 @@
-const PokemonDetail = (props: any) => { 
+const PokeInfo = (props: any) => { 
   const getTypes = (types: any) => types?.map((t: any) => t.type.name).join(', ');
 
   const info = props?.selectedPokemon;
@@ -58,4 +58,4 @@ const PokemonDetail = (props: any) => {
   );
 }
 
-export default PokemonDetail;
+export default PokeInfo;

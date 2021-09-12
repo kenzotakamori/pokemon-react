@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import './App.scss';
 import pokemonsData from './pokemonsData.js'
-import PokemonList from './components/PokemonList'
-import PokemonHeader from './components/PokemonHeader'
-import PokemonFooter from './components/PokemonFooter'
+import PokedexList from './components/Pokedex/PokedexList'
+import PokedexHeader from './components/Pokedex/PokedexHeader'
+import PokedexFooter from './components/Pokedex/PokedexFooter'
 
 const App = () => {
   const data = pokemonsData.map((p: any) => {
@@ -32,14 +32,14 @@ const App = () => {
 
   return (
     <div className="App">
-      <PokemonHeader 
+      <PokedexHeader 
         isOpen={isOpen}
         togglePokeball={togglePokeball}
       />
       <div className="pokemon-body">
         {
           dataLength ?
-          <PokemonList
+          <PokedexList
             data={data}
             handlePokemonClick={handlePokemonClick}
           /> :
@@ -51,7 +51,7 @@ const App = () => {
           </div>
         }
       </div>
-      <PokemonFooter isOpen={isOpen}/>
+      <PokedexFooter isOpen={isOpen}/>
     </div>
   );
 }

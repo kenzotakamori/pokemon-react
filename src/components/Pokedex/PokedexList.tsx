@@ -1,8 +1,8 @@
-import Pokemon from './Pokemon'
+import PokeIcon from '../Pokemon/PokeIcon'
 
-const PokemonList = (props: any) => {
+const PokedexList = (props: any) => {
   const pokemonsComponent = props.data.map((pokemon: any) => 
-    <Pokemon
+    <PokeIcon
       key={pokemon.name}
       info={pokemon}
       handlePokemonClick={props.handlePokemonClick}
@@ -16,4 +16,4 @@ const PokemonList = (props: any) => {
   );
 }
 
-export default PokemonList;
+export default PokedexList;

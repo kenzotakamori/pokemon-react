@@ -1,4 +1,4 @@
-const Pokemon = (props: any) =>  {
+const PokeIcon = (props: any) =>  {
   const info = props?.info;
 
   return (
@@ -15,4 +15,4 @@ const Pokemon = (props: any) =>  {
   );
 }
   
-export default Pokemon;
+export default PokeIcon;

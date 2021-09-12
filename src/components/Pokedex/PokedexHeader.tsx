@@ -1,4 +1,4 @@
-const PokemonHeader = (props: any) => {
+const PokedexHeader = (props: any) => {
   return (
     <header>
       <div className={props.isOpen ? 'red-section header-open' : 'red-section'}>
@@ -17,4 +17,4 @@ const PokemonHeader = (props: any) => {
   );
 };
 
-export default PokemonHeader;
+export default PokedexHeader;
