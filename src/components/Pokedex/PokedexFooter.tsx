@@ -1,3 +1,5 @@
+import '../../css/Footer.scss';
+
 const PokedexFooter = (props: any) => {
   return (
     <footer className={props.isOpen ? 'footer-open' : ''}>

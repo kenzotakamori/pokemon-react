@@ -1,8 +1,10 @@
+import '../../css/PokeIcon.scss';
+
 const PokeIcon = (props: any) =>  {
   const info = props?.info;
 
   return (
-    <div className={info.display ? 'Pokemon' : 'Pokemon hide'}>
+    <div className={info.display ? 'PokeIcon' : 'PokeIcon hide'}>
       <div className="image-container">
         <img 
           src={info.imgUrl}

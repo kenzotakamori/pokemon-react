@@ -1,3 +1,5 @@
+import '../../css/Header.scss';
+
 const PokedexHeader = (props: any) => {
   return (
     <header>

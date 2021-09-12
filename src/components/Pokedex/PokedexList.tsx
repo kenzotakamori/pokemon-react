@@ -1,3 +1,4 @@
+import '../../css/PokedexList.scss';
 import PokeIcon from '../Pokemon/PokeIcon'
 
 const PokedexList = (props: any) => {
@@ -10,7 +11,7 @@ const PokedexList = (props: any) => {
   )
 
   return (
-    <div className="PokemonList">
+    <div className="PokedexList">
       {pokemonsComponent}
     </div>
   );

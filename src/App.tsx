@@ -36,7 +36,7 @@ const App = () => {
         isOpen={isOpen}
         togglePokeball={togglePokeball}
       />
-      <div className="pokemon-body">
+      <div className="pokedex-body">
         {
           dataLength ?
           <PokedexList
