@@ -1,4 +1,4 @@
-import '../../css/Header.scss';
+import '../../css/Pokedex/Header.scss';
 
 const PokedexHeader = (props: any) => {
   return (

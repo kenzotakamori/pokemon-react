@@ -1,4 +1,4 @@
-import '../../css/PokeIcon.scss';
+import '../../css/Pokemon/PokeIcon.scss';
 
 const PokeIcon = (props: any) =>  {
   const info = props?.info;

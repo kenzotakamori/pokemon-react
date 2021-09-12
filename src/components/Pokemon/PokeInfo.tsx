@@ -1,4 +1,4 @@
-import '../../css/PokeInfo.scss';
+import '../../css/Pokemon/PokeInfo.scss';
 
 const PokeInfo = (props: any) => { 
   const getTypes = (types: any) => types?.map((t: any) => t.type.name).join(', ');

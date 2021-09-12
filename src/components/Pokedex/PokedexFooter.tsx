@@ -1,4 +1,4 @@
-import '../../css/Footer.scss';
+import '../../css/Pokedex/Footer.scss';
 
 const PokedexFooter = (props: any) => {
   return (
