@@ -6,6 +6,8 @@ header {
     height: 50vh;
     background-color: red;
     transition: all 1s;
+    display: grid;
+    place-items: center;
     &.header-open {
       height: 10vh;
     }
@@ -49,5 +51,23 @@ header {
     &:hover {
       background-color: #f7766d;
     }
+  }
+
+  .poke-logo-enter {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  .poke-logo-enter-active {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 1000ms, transform 1000ms;
+  }
+  .poke-logo-exit {
+    opacity: 1;
+  }
+  .poke-logo-exit-active {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 300ms, transform 300ms;
   }
 }
