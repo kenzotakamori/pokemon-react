@@ -19,15 +19,22 @@ const App = () => {
     setIsOpen((prevState) => !prevState);
   };
 
-  const handlePokemonClick = (name: string) => {
-    fetch(`https://pokeapi.co/api/v2/pokemon/${name}`)
-      .then(res => res.json())
-      .then((result) => {
-        setIsPokemonClicked(true);
-        setSelectedPokemon(result);
-        console.log(isPokemonClicked);
-        console.log(selectedPokemon);
-      });
+  const handlePokemonClick = async (name: string) => {
+    try {
+      const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${name}`);
+      console.log(response);
+      if(!response.ok) {
+        throw new Error("Something went wrong");
+      }
+      const data = await response.json();
+
+      setIsPokemonClicked(true);
+      setSelectedPokemon(data);
+      console.log(isPokemonClicked);
+      console.log(selectedPokemon);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
