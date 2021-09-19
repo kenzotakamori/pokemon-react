@@ -21,7 +21,8 @@ const CONTACTS = [
 
 const PokedexFooter = (props: any) => {
   const ContactList = CONTACTS.map((contact: any) => (
-    <a 
+    <a
+      key={contact.id}
       href={contact.url}
       target="_blank"
       rel="noreferrer"
