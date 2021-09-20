@@ -1,10 +1,9 @@
-.PokemonList {
+.PokedexList {
     background: beige;
     border: 2px double black;
     border-radius: 10px;
     display: grid;
-    grid-template-columns: repeat(4, 102px);
-    grid-template-rows: max-content;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
     grid-gap: 16px;
     padding: 15px;
     overflow-y: scroll;

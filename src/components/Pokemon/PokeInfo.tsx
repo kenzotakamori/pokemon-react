@@ -1,11 +1,13 @@
-const PokemonDetail = (props: any) => { 
+import '../../css/Pokemon/PokeInfo.scss';
+
+const PokeInfo = (props: any) => { 
   const getTypes = (types: any) => types?.map((t: any) => t.type.name).join(', ');
 
   const info = props?.selectedPokemon;
   if (!info) return <></>;
 
   return (
-    <div className="PokemonDetail">
+    <div className="PokeInfo">
       <span className="pokemon-name">
         <code>{info.name}</code>
       </span>
@@ -58,4 +60,4 @@ const PokemonDetail = (props: any) => {
   );
 }
 
-export default PokemonDetail;
+export default PokeInfo;
