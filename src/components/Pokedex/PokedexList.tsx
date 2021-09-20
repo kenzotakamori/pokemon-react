@@ -1,8 +1,14 @@
 import '../../css/Pokedex/PokedexList.scss';
 import PokeIcon from '../Pokemon/PokeIcon'
+import { PokemonInterface } from '../interfaces';
 
-const PokedexList = (props: any) => {
-  const pokemonsComponent = props.data.map((pokemon: any) => 
+interface PokedexListProps {
+  data: PokemonInterface[]
+  handlePokemonClick: (name: string) => void 
+}
+
+const PokedexList = (props: PokedexListProps) => {
+  const pokemonsComponent = props.data.map((pokemon: PokemonInterface) => 
     <PokeIcon
       key={pokemon.name}
       info={pokemon}

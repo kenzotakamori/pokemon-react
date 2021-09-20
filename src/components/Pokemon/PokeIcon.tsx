@@ -1,7 +1,13 @@
 import '../../css/Pokemon/PokeIcon.scss';
+import { PokemonInterface } from '../interfaces';
 
-const PokeIcon = (props: any) =>  {
-  const info = props?.info;
+interface PokeIconProps {
+  info: PokemonInterface
+  handlePokemonClick: (name: string) => void 
+}
+
+const PokeIcon = (props: PokeIconProps) =>  {
+  const { info, handlePokemonClick } = props;
 
   return (
     <div className={info.display ? 'PokeIcon' : 'PokeIcon hide'}>
@@ -9,7 +15,7 @@ const PokeIcon = (props: any) =>  {
         <img 
           src={info.imgUrl}
           alt={info.name}
-          onClick={() => props?.handlePokemonClick(info.name)}
+          onClick={() => handlePokemonClick(info.name)}
         />
       </div>
       <span><code>{info.name}</code></span>

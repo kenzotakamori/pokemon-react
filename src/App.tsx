@@ -4,16 +4,17 @@ import pokemonsData from './pokemonsData.js'
 import PokedexList from './components/Pokedex/PokedexList'
 import PokedexHeader from './components/Pokedex/PokedexHeader'
 import PokedexFooter from './components/Pokedex/PokedexFooter'
+import { PokemonInterface } from './components/interfaces';
 
 const App = () => {
-  const data = pokemonsData.map((p: any) => {
+  const data = pokemonsData.map((p: PokemonInterface) => {
     p.display = true;
     return p;
   });
-  const dataLength = data.filter((p: any) => p.display).length;
-  const [isOpen, setIsOpen] = useState(false);
-  const [isPokemonClicked, setIsPokemonClicked] = useState(false);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
+  const dataLength = data.filter((p: PokemonInterface) => p.display).length;
+  const [isOpen, setIsOpen] = useState<Boolean>(false);
+  const [isPokemonClicked, setIsPokemonClicked] = useState<Boolean>(false);
+  const [selectedPokemon, setSelectedPokemon] = useState<PokemonInterface>();
 
   const togglePokeball = () => {
     setIsOpen((prevState) => !prevState);
