@@ -21,9 +21,12 @@ footer {
     }
   }
   &.footer-open {
-    height: 10vh;
+    height: 0;
     .row-icons {
-      line-height: 10vh;
+      line-height: 0;
+      a { 
+        display: none;
+      }
     }
   }
 }
